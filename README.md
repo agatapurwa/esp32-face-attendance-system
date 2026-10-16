@@ -14,9 +14,6 @@ The following diagram illustrates the high-level hardware architecture, communic
 
 ![System Architecture](./docs/system-architecture.png) 
 
-<details>
-<summary><b>Click to view ASCII / Mermaid representation</b></summary>
-
 ```mermaid
 graph TD
     ESP32CAM[ESP32-CAM Board<br/>Video Streaming] -- Wi-Fi HTTP --> Server[Python Central Server<br/>OpenCV + Dlib Model]
