@@ -43,9 +43,11 @@ esp32-face-attendance-system/
 │   │   └── camera_index.h
 │   └── esp32_lcd_display/
 │       └── esp32_lcd_display.ino
+├── src/                  # Core Python source code application
+│   ├── face_encoder.py       # Batch feature extraction script
+│   └── main_attendance_app.py# Main recognition engine and schedule validator
+├── .env.example          # Environment variables configuration template
 ├── .gitignore            # Git exclusion rules for privacy and build binaries
-├── face_encoder.py       # Batch feature extraction script
-├── main_attendance_app.py# Main recognition engine and schedule validator
 ├── README.md             # Project documentation
 └── requirements.txt      # Python dependencies manifest
 
