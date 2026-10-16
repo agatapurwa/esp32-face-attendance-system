@@ -1,0 +1,20 @@
+# Python Virtual Environments & Cache
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+myenv/
+
+# Datasets & Generated Features (Privacy & Security)
+dataset/
+feature_db/
+proof_images/
+*.pickle
+*.csv
+
+# IDE & OS Files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
