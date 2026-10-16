@@ -112,29 +112,28 @@ pip install -r requirements.txt
 
 ### 3. Execution Pipeline
 
-1. **Dataset Preparation & Encoding:**
+1. **Environment Configuration:**
+* Copy the environment template and set your specific network IPs:
+```bash
+cp .env.example .env
+ ```
+
+* Update `ESP32_CAM_URL` and `ESP32_LCD_IP` inside your local `.env` file.
+
+2. **Dataset Preparation & Encoding:**
 * Place student training images in `dataset/<Student_Name>/`.
 * Run the encoding pipeline:
 ```bash
 python face_encoder.py
 
 ```
-
-
 * Biometric embeddings will be serialized into `feature_db/<Student_Name>.pickle`.
 
-
-
-
-2. **Launch Central Recognition App:**
-* Update `ESP32_CAM_URL` and `ESP32_LCD_IP` in `main_attendance_app.py`.
+3. **Launch Central Recognition App:**
 * Execute the application:
 ```bash
-python main_attendance_app.py
-
+python src/main_attendance_app.py
 ```
-
-
 
 
 
