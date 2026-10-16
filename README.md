@@ -61,11 +61,11 @@ esp32-face-attendance-system/
 
 1. **Clone the Repository:**
 ```bash
-git clone [https://github.com/your-username/esp32-face-attendance-system.git](https://github.com/your-username/esp32-face-attendance-system.git)
-cd esp32-face-attendance-system
-
+git clone [https://github.com/agatapurwa/esp32-face-attendance-system.git](https://github.com/agatapurwa/esp32-face-attendance-system.git)
 ```
-
+```bash
+cd esp32-face-attendance-system
+```
 
 2. **Set Up Python Virtual Environment:**
 ```bash
@@ -73,7 +73,6 @@ python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 
 ```
-
 
 3. **Install Dependencies:**
 ```bash
@@ -126,7 +125,7 @@ cp .env.example .env
 * Place student training images in `dataset/<Student_Name>/`.
 * Run the encoding pipeline:
 ```bash
-python face_encoder.py
+python src/face_encoder.py
 
 ```
 * Biometric embeddings will be serialized into `feature_db/<Student_Name>.pickle`.
@@ -169,7 +168,5 @@ This software ecosystem and its hardware implementation logic are protected unde
 ## 📄 License
 
 Distributed under the **MIT License**. See `LICENSE` for more information.
-
-```
 
 ```
