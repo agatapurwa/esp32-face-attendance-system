@@ -8,21 +8,25 @@ import urllib.request
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List, Optional, Tuple
-
 import cv2
 import face_recognition
 import numpy as np
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 # ==============================================================================
 # CONFIGURATION & CONSTANTS
 # ==============================================================================
-# Network Configuration (Placeholder local IPs)
-ESP32_CAM_URL = 'http://192.168.1.50/capture'
-ESP32_LCD_IP = '192.168.1.100'
-ESP32_LCD_PORT = 12345
+# Network Configuration
+ESP32_CAM_URL = os.getenv('ESP32_CAM_URL', 'http://192.168.1.50/capture')
+ESP32_LCD_IP = os.getenv('ESP32_LCD_IP', '192.168.1.100')
+ESP32_LCD_PORT = int(os.getenv('ESP32_LCD_PORT', '12345'))
 
 # Directory Paths
-BASE_DIR = Path(__file__).resolve().parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 DATABASE_PATH = BASE_DIR / 'feature_db'
 PROOF_FOLDER = BASE_DIR / 'proof_images'
 PROOF_FOLDER.mkdir(parents=True, exist_ok=True)
